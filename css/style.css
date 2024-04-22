@@ -1,27 +1,49 @@
 /* ini file css */
+body {
+    background: linear-gradient(#97E7E1, #6290da, #3273dd);
+}
+
 main {
     padding: 64px 32px 64px 32px;
+    background: linear-gradient(#97E7E1, #6290da, #3273dd);
 }
+
 .main-title {
     text-align: center;
 }
+
+.main-title h1 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 580;
+    font-style: normal;
+    color: #141E46;
+}
+
 .main-introduction {
-    padding: 16px;
-    background-color: aliceblue;
+    padding: 4vw;
+    background-color: #7cecf6;
     border-radius: 8px;
+    width: 50%;
+    margin: auto;
 }
-.section-celcius{
+
+.section-celcius {
     padding-top: 16px;
 }
-.section-fahrenheit{
+
+.section-fahrenheit {
     padding-top: 16px;
 }
-.section-explanation{
+
+.section-explanation {
     padding-top: 16px;
 }
-.section-result{
+
+.section-result {
     padding-top: 16px;
 }
+
 textarea {
     width: 100%;
     height: 32px;
@@ -29,35 +51,98 @@ textarea {
     border: 2px solid lavender;
     border-radius: 4px;
     font-size: 16px;
-    color: burlywood;
+    color: #371c8e;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 .explanation {
-    font-size:20px;
-    font-style: italic;
+    font-size: 20px;
+    color: #141E46;
 }
+
 .explanation>sub {
     font-style: normal;
 }
+
+#conversionType {
+    color: #371c8e;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 40%;
+    background-color: #7cecf6;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#conversionType:hover {
+    scale: 1.1;
+    border: 1px solid #371c8e;
+}
+
+
 button {
     border: none;
     font-size: 14px;
     padding: 8px;
     border-radius: 4px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     margin-right: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+
 }
+
+button:hover {
+    scale: 1.1;
+}
+
 #button-convert {
-    background-color: chocolate;
-    color:white;
+    background-color: #25135f;
+    color: white;
 }
+
 #button-reset {
-    background-color: rgb(127, 0, 0);
-    color:white;
+    background-color: rgb(185, 0, 0);
+    color: white;
 }
-#button-reverse {
-    background-color: rgb(127, 0, 158);
-    color:white;
-}
+
 .container-button {
     padding-top: 8px;
+}
+
+h3 {
+    color: #6290da;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    color: #25135f;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 530;
+    font-style: normal;
+}
+
+#warningInput {
+    font-size: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }

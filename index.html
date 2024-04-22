@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <!-- kode semantic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nanum+Myeongjo&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,552;1,552&display=swap"
+        rel="stylesheet">
+
+    <script src="./js/script.js"></script>
 </head>
+
 <body>
     <main>
         <header class="main-title">
             <h1>Temperature Converter By M.Raihan Athalah</h1>
-       </header>
+        </header>
         <section class="main-introduction">
-        <!-- Section Introduction -->
-            <section>
-                <p>Masukkan Suhu Derajat &deg;C ....</p>
-            </section>
-    
+            <!-- Section Introduction -->
+            <select id="conversionType">
+                <option value="none">Choose Conversion</option>
+                <optgroup label="From Celsius">
+                    <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+                    <option value="celsiusToKelvin">Celsius to Kelvin</option>
+                </optgroup>
+                <optgroup label="From Fahrenheit">
+                    <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+                    <option value="fahrenheitToKelvin">Fahrenheit to Kelvin</option>
+                </optgroup>
+                <optgroup label="From Kelvin">
+                    <option value="kelvinToCelsius">Kelvin to Celsius</option>
+                    <option value="kelvinToFahrenheit">Kelvin to Fahrenheit</option>
+                </optgroup>
+            </select><br><br>
             <section class="section-celcius">
-                <header>
-                    <h3>Celcius &deg;C</h3>
-                </header>
-    
+                <br>
                 <article>
-                    <textarea name="" id="" cols="" rows="1"></textarea>
+                    <textarea name="degreeInput" id="degreeInput" cols="" rows="1" placeholder="Masukkan Besar Temperature..."></textarea>
+                    <div id="warningInput"></div>
                     <div class="container-button">
-                        <button id="button-convert">Convert</button>
-                        <button id="button-reset">Reset</button>
-                        <button id="button-reverse">Reverse</button>
+                        <button id="button-convert" onclick="convert()">Convert</button>
+                        <button id="button-reset" onclick="reset()">Reset</button>
                     </div>
-                </article>
-            </section>
-
-            <section class="section-fahrenheit">
-                <header>
-                    <h3>Fahrenheit &deg;F</h3>
-                </header>
-    
-                <article>
-                    <textarea name="" id="" cols="" rows="1"></textarea>
                 </article>
             </section>
 
             <section class="section-explanation">
                 <header>
-                    <h3>result</h3>
+                    <h3>Result</h3>
                 </header>
-    
+
                 <article>
-                    <textarea name="" id="" cols="" rows="1"></textarea>
+                    <textarea name="" id="resultOutput" cols="" rows="1" readonly></textarea>
                 </article>
             </section>
             <section class="section-result">
                 <header>
-                    <h3>Cara konversi dari &deg;C ke &deg;F</h3>
+                    <h2>Rumus Konversi Suhu</h2>
+                    <h3>Cara konversi dari (&deg;C ke &deg;F) dan (&deg;F ke &deg;C)</h3>
                 </header>
                 <hr>
                 <article>
-                    <h1 class="explanation">S<sub>(&deg;F)</sub></h1>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 9/5) + 32</h1>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32) x 5/9</h1>
+                </article>
+            </section>
+            <section class="section-result">
+                <header>
+                    <h3>Cara konversi dari (&deg;C ke &deg;K) dan (&deg;K ke &deg;C)</h3>
+                </header>
+                <hr>
+                <article>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;K)</sub> = <i>S</i><sub>(&deg;C)</sub> + 273.15</h1>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;C)</sub> = <i>S</i><sub>(&deg;K)</sub> - 273.15
+                </article>
+            </section>
+            <section class="section-result">
+                <header>
+                    <h3>Cara konversi dari (&deg;F ke &deg;K) dan (&deg;K ke &deg;F)</h3>
+                </header>
+                <hr>
+                <article>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;K)</sub> = (<i>S</i><sub>(&deg;F)</sub>+ 459.67) × 5/9</h1>
+                    <h1 class="explanation"><i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;K)</sub> - 273.15) × 9/5 + 32</h1>
                 </article>
             </section>
         </section>
     </main>
 </body>
+
 </html>
